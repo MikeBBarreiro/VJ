@@ -1,0 +1,374 @@
+/*
+ * Author: Carlos Alvarez
+ * URL: http://Alvarez.is
+ *
+ * Project Name: NYC Design
+ * Version: 1.0
+ * Date: 04-20-2014
+ * URL:
+ */
+
+
+/* ==========================================================================
+   Base Styles, Bootstrap Modifications & Fonts Import
+   ========================================================================== */
+
+@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300);
+@import url(https://fonts.googleapis.com/css?family=Sancreek);
+@import url(https://fonts.googleapis.com/css?family=New+Rocker);
+@import url(https://fonts.googleapis.com/css?family=Flavors);
+
+/*.loadingLayer{
+  position: fixed;
+  width: 100%;
+  background-color: RGBA(63, 49, 125, 0.5);
+  z-index: 99;
+}*/
+
+::-moz-selection {
+    background: #f2c2c9;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+::selection {
+    background: #16a085;
+    color: #a4003a;
+    text-shadow: none;
+}
+
+/*
+ * A better looking default horizontal rule
+ */
+
+ hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.centered {
+	text-align: center
+}
+
+.mt {
+	margin-top: 80px;
+}
+
+.mb {
+	margin-bottom: 80px;
+}
+
+/* ==========================================================================
+   General styles
+   ========================================================================== */
+
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+
+    background-position: center center; background-repeat: no-repeat;
+    /* Safari 4-5, Chrome 1-9 */ /* Can't specify a percentage size? Laaaaaame. */
+    background: -webkit-gradient(radial, center center, 0, center center, 460, from(white), to #1B1B1B);
+    /* Safari 5.1+, Chrome 10+ */ background: -webkit-radial-gradient(circle, white, #1B1B1B);
+    /* Firefox 3.6+ */ background: -moz-radial-gradient(circle, white, #1B1B1B);
+    /* IE 10 */ background: -ms-radial-gradient(circle, white, #1B1B1B);
+
+    -webkit-font-smoothing: antialiased;
+    -webkit-overflow-scrolling: touch;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-weight: 700;
+    color: #4a4a4a;
+}
+
+.navbar-default .navbar-toggle{border-color: black !important;}
+.navbar-default .navbar-toggle:hover{background-color: RGBA(27, 27, 27, 0.3) !important;}
+.icon-bar{background-color: black !important;}
+
+
+.navbar-brand {
+	font-weight: 700;
+}
+
+.navbar-default .navbar-brand {
+	color: black;
+}
+
+.navbar-default {
+	background-color: RGBA(225, 202, 70, 0.7);
+	border-color: transparent;
+  border-bottom: 1px solid black;
+}
+
+.navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+	color: #E1CA46;
+	background-color: transparent;
+	border-bottom: 2px solid #E1CA46;
+  text-shadow: 0 0 2px black;
+}
+
+.navbar-default .navbar-brand:hover{
+  color: RGBA(88, 69, 179, 0.5) !important;
+}
+
+.navbar-default .navbar-nav > li > a {
+	color: black;
+}
+
+/* ==========================================================================
+   Wrap Sections
+   ========================================================================== */
+
+ .vj-img{
+   border-radius: 100%;
+
+   background-position: center center; background-repeat: no-repeat;
+   /* Safari 4-5, Chrome 1-9 */ /* Can't specify a percentage size? Laaaaaame. */
+   background: -webkit-gradient(radial, center center, 0, center center, 460, from(black), to(RGBA(27, 27, 27, 0)));
+   /* Safari 5.1+, Chrome 10+ */ background: -webkit-radial-gradient(circle, black, RGBA(27, 27, 27, 0));
+   /* Firefox 3.6+ */ background: -moz-radial-gradient(circle, black, RGBA(27, 27, 27, 0));
+   /* IE 10 */ background: -ms-radial-gradient(circle, RGBA(27, 27, 27, 1.00), RGBA(27, 27, 27, 0));
+   /* Opera couldn't do radial gradients, then at some point they started supporting the -webkit- syntax, how it kinda does but it's kinda broken (doesn't do sizing) */
+ }
+
+#headerwrap {
+	background: url('../img/6802639314_935116418a_b copy.jpg') center top;
+	/*margin-top: -70px;*/
+	padding-top: 90px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+  /*background: -webkit-linear-gradient(#080808, #1B1B1B);*/
+  /* For Safari 5.1 to 6.0 */
+  /*background: -o-linear-gradient(#080808, #1B1B1B);*/
+  /* For Opera 11.1 to 12.0 */
+  /*background: -moz-linear-gradient(#080808, #1B1B1B);*/
+   /* For Firefox 3.6 to 15 */
+  /*background: linear-gradient(#080808, #1B1B1B);*/
+  /* Standard syntax */
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#headerwrap h2 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+  font-family: 'Sancreek', cursive;
+}
+
+#headerwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#social {
+	padding-top: 50px;
+	padding-bottom: 50px;
+	background-color: #f2f2f2;
+}
+
+#social i {
+	font-size: 40px;
+	color: #4a4a4a
+}
+
+#social i:hover {
+	color: #1abc9c
+}
+
+#footerwrap {
+	padding-top: 70px;
+	padding-bottom: 50px;
+	background-color: #2f2f2f;
+}
+
+#footerwrap p {
+	color: #f2f2f2;
+	margin-left: 10px;
+}
+
+#workwrap {
+	background: url(../img/work.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 650px;
+	width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+#workwrap h1 {
+	color:#ffffff;
+	padding-top: 10px;
+	padding-bottom: 20px;
+	letter-spacing: 4px;
+	font-size: 80px;
+	font-weight: bold;
+}
+
+#workwrap h4 {
+	font-weight: 400;
+	color: #ffffff
+}
+
+#aboutwrap {
+	background: url(../img/about.jpg) no-repeat center top;
+	margin-top: -70px;
+	padding-top: 250px;
+	text-align:center;
+	background-attachment: relative;
+	background-position: center center;
+	min-height: 550px;
+	width: 100%;
+
+    -webkit-background-size: 100%;
+    -moz-background-size: 100%;
+    -o-background-size: 100%;
+    background-size: 100%;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+/*.worksBG{
+  background-image: url(../img/gradient-background-wallpaper-1.jpg);
+  background-size: 100% 100%;
+  height: 100%;
+  width: 100%:
+}*/
+
+a > img {
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+/* Gallery */
+.gallery {
+	margin-top: 30px;
+}
+
+.gallery img:hover {
+	opacity: 0.4;
+}
+
+.divWorks{
+  background-image: url(../img/dTrMyRgEc.png);
+  background-size:50% 100%;
+  background-position: center;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+}
+
+/*HOVER EFFECTS*/
+/* Hang */
+@-webkit-keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+
+@keyframes hvr-hang {
+  0% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+
+  50% {
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);
+  }
+
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+
+@-webkit-keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+
+@keyframes hvr-hang-sink {
+  100% {
+    -webkit-transform: translateY(8px);
+    transform: translateY(8px);
+  }
+}
+
+.hvr-hang {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+}
+.hvr-hang:hover, .hvr-hang:focus, .hvr-hang:active {
+  -webkit-animation-name: hvr-hang-sink, hvr-hang;
+  animation-name: hvr-hang-sink, hvr-hang;
+  -webkit-animation-duration: .3s, 1.5s;
+  animation-duration: .3s, 1.5s;
+  -webkit-animation-delay: 0s, .3s;
+  animation-delay: 0s, .3s;
+  -webkit-animation-timing-function: ease-out, ease-in-out;
+  animation-timing-function: ease-out, ease-in-out;
+  -webkit-animation-iteration-count: 1, infinite;
+  animation-iteration-count: 1, infinite;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+  -webkit-animation-direction: normal, alternate;
+  animation-direction: normal, alternate;
+  cursor: pointer;
+}
