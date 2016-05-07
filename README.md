@@ -1,5 +1,4 @@
 # VJ
-,,,
 
 - - - -
 This is a promotional start up site for a friend in his business on selling vaporizers. Voodoo Juices prime colors were chosen bu founder 
